@@ -246,10 +246,11 @@ li {
   border-width: 0px;
   border-radius: 2px;
   padding: 0.5% 1%;
-}
-.languages .butt:hover {
   box-shadow: 8px 7px 5px 1px darkgrey;
 }
+/* .languages .butt:hover {
+  box-shadow: 8px 7px 5px 1px darkgrey;
+} */
 
 .frameworks {
   display: flex;
@@ -315,20 +316,24 @@ li {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 1%;
+  padding: 2%;
 }
 
 .project {
   background-color: #200000af;
-
-  width: 350px;
-  margin-top: 10px;
+  border-radius: 2px;
+  width: 320px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding: 2%;
-  box-shadow: 8px 7px 5px 1px darkgrey;
 }
 .project img {
-  width: 95%;
+  width: 100%;
   border: 2px solid #b4a6a6;
+}
+.project:hover {
+  /* width: 330px; */
+  box-shadow: 8px 7px 5px 1px rgb(138, 135, 135);
 }
 .project a {
   text-decoration: none;
