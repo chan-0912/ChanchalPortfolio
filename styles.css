@@ -31,7 +31,7 @@
   font-family: "Roboto Serif", serif;
   font-weight: 400;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 7vh;
 }
 hr {
   width: 100%;
@@ -90,8 +90,8 @@ li {
 .homePage .le {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin-top: 225px;
+  width: 75%;
+  justify-content: center;
   align-items: center;
 }
 .homePage .le h1 {
@@ -100,7 +100,7 @@ li {
   text-align: center;
   font-family: "Roboto Serif", serif;
   font-weight: 400;
-  margin-bottom: 13px;
+  margin-bottom: 2%;
 }
 .homePage .le button {
   border: none;
@@ -133,9 +133,12 @@ li {
 }
 .homePage .ri {
   padding: 22px;
+  width: 30%;
+  justify-content: end;
+  display: flex;
 }
 .homePage .ri img {
-  width: 400px;
+  height: 95vh;
 }
 
 .aboutPage {
