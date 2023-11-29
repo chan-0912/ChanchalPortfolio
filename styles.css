@@ -50,6 +50,7 @@ hr {
   width: 80%;
   margin-left: 20%;
 }
+
 .homePage {
   height: 100vh;
   display: flex;
@@ -96,7 +97,7 @@ li {
 }
 .homePage .le h1 {
   color: #200000;
-  font-size: 60px;
+  font-size: 4vw;
   text-align: center;
   font-family: "Roboto Serif", serif;
   font-weight: 400;
@@ -114,10 +115,6 @@ li {
   font-weight: 400;
 }
 
-.homePage .le button:hover {
-  /* box-shadow: 8px 7px 5px 6px darkgrey; */
-}
-
 /* .homePage .le button img {
   vertical-align: middle;
   height: 19px;
@@ -129,7 +126,7 @@ li {
   font-family: "Roboto Serif", serif;
   color: #ffff;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 2vw;
 }
 .homePage .ri {
   padding: 22px;
@@ -139,6 +136,7 @@ li {
 }
 .homePage .ri img {
   height: 95vh;
+  max-width: 150%;
 }
 
 .aboutPage {
@@ -172,7 +170,7 @@ li {
   text-decoration-thickness: 1.5px;
 }
 .profiles {
-  height: 50%;
+  height: 20%;
 }
 .profiles h1 {
   color: #200000;
@@ -183,7 +181,7 @@ li {
 }
 
 .pro-button a {
-  font-size: 20px;
+  font-size: 1.5vw;
   background-color: #200000;
   color: #ffff;
   text-decoration: none;
@@ -241,7 +239,7 @@ li {
   display: flex;
 }
 .languages .butt {
-  font-size: 20px;
+  font-size: 1.25vw;
   background-color: #200000;
   color: #ffff;
   text-decoration: none;
@@ -260,7 +258,7 @@ li {
 }
 
 .frameworks div {
-  font-size: 20px;
+  font-size: 1.25vw;
   background-color: #200000;
   color: #ffff;
   text-decoration: none;
@@ -276,7 +274,7 @@ li {
 }
 
 .tools div {
-  font-size: 20px;
+  font-size: 1.25vw;
   background-color: #200000;
   color: #ffff;
   text-decoration: none;
@@ -293,7 +291,7 @@ li {
 }
 
 .soft div {
-  font-size: 20px;
+  font-size: 1.25vw;
   background-color: #200000;
   color: #ffff;
   text-decoration: none;
@@ -329,6 +327,8 @@ li {
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 2%;
+  overflow: auto;
+  height: 100px;
 }
 .project img {
   width: 100%;
@@ -341,7 +341,156 @@ li {
 .project a {
   text-decoration: none;
   color: #200000;
-  font-size: 25px;
   text-align: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar,
+  .content {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .navbar {
+    display: none;
+    position: absolute;
+  }
+  .content {
+    margin-left: 0px;
+  }
+  .homePage {
+    justify-content: center;
+  }
+  .homePage img {
+    display: none;
+  }
+  .homePage .le {
+    width: 100%;
+  }
+
+  .homePage .ri {
+    display: none;
+  }
+
+  .languages .butt,
+  .frameworks div,
+  .tools div,
+  .soft div,
+  .pro-button a {
+    font-size: 18px;
+    margin: 2%;
+    padding: 1% 1.5%;
+  }
+
+  .timeline {
+    height: 90%;
+  }
+
+  .homePage .le h1 {
+    font-size: 8vw;
+  }
+
+  .homePage .le button a {
+    font-size: 4vw;
+  }
+  .projects {
+    overflow: auto;
+    height: 100vh;
+  }
+  .projects::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.aboutPage {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("/Images/bg3.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.skillsPage {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("/Images/bg3.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.view {
+  /* width: 300px; */
+  /* height: 200px; */
+  margin: 10px;
+  float: left;
+  border: 5px solid #ffffff;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  box-shadow: 0px 0px 8px #200000;
+  cursor: default;
+}
+.view .mask,
+.view .content {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.view img {
+  display: block;
+  position: relative;
+  width: 400px;
+  height: 200px;
+}
+
+.view a.info {
+  background: url(./Images/githubIcon.png) center no-repeat;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0;
+
+  width: 80px;
+  height: 80px;
+}
+.view a {
+  text-decoration: none;
+  color: #ffffff;
+
+  justify-content: center;
+  text-align: left;
+}
+.effect .mask {
+  opacity: 0;
+  overflow: visible;
+  border: 100px solid rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
+}
+
+.effect a.info {
+  position: relative;
+  top: -10px; /* Center the link */
+  opacity: 0;
+  transition: opacity 0.5s 0s ease-in-out;
+}
+
+.effect:hover .mask {
+  opacity: 1;
+  border: 100px solid rgba(0, 0, 0, 0.7);
+}
+
+.effect:hover a.info {
+  opacity: 1;
+  transition-delay: 0.3s;
 }
