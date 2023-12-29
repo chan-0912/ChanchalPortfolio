@@ -65,7 +65,29 @@ li {
   color: #ffff;
   font-weight: 400;
   margin: 20px;
+  transition: all 0.07s ease;
+  opacity: 0.75;
 }
+
+li:hover {
+  opacity: 1;
+  /* transform: scale(1.1); */
+}
+
+li::before {
+  transition: 300ms;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  width: 0%;
+  margin-top: 8%;
+}
+
+li:hover::before {
+  width: 40%;
+}
+
 .icon {
   vertical-align: text-top;
   height: 19px;
@@ -179,20 +201,30 @@ li {
   text-underline-offset: 5px;
   text-decoration-thickness: 1.5px;
 }
-
-.pro-button a {
+.profile-buttons {
+  display: flex;
+}
+.pro-button {
   font-size: 1.5vw;
+  border: 0.1rem solid #200000;
   background-color: #200000;
   color: #ffff;
   text-decoration: none;
   border-radius: 2px;
   padding: 0.5% 1%;
   margin: 1%;
+  transition: all 0.07s ease;
+  /* opacity: 0.90; */
 }
-
-.pro-button a:hover {
-  box-shadow: 8px 7px 5px 1px darkgrey;
-  padding: 0.75% 1.25%;
+.pro-button a {
+  color: #ffff;
+  text-decoration: none;
+}
+.pro-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem #200000;
+  border-color: #200000;
+  opacity: 0.95;
 }
 .timelinePage {
   height: 100vh;
@@ -238,20 +270,23 @@ li {
 .languages {
   display: flex;
 }
-.languages .butt {
+.languages div {
   font-size: 1.25vw;
+  border: 0.1rem solid #200000;
   background-color: #200000;
   color: #ffff;
   text-decoration: none;
   margin: 1%;
-  border-width: 0px;
   border-radius: 2px;
   padding: 0.5% 1%;
-  box-shadow: 8px 7px 5px 1px darkgrey;
+  transition: all 0.07s ease;
 }
-/* .languages .butt:hover {
-  box-shadow: 8px 7px 5px 1px darkgrey;
-} */
+.languages div:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem #200000;
+  border-color: #200000;
+  opacity: 0.95;
+}
 
 .frameworks {
   display: flex;
@@ -259,14 +294,21 @@ li {
 
 .frameworks div {
   font-size: 1.25vw;
+  border: 0.1rem solid #200000;
   background-color: #200000;
   color: #ffff;
   text-decoration: none;
   margin: 1%;
-  width: fit-content;
+  /* width: fit-content; */
   border-radius: 2px;
   padding: 0.5% 1%;
-  box-shadow: 8px 7px 5px 1px darkgrey;
+  /* box-shadow: 8px 7px 5px 1px darkgrey; */
+}
+.frameworks div:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem #200000;
+  border-color: #200000;
+  opacity: 0.95;
 }
 
 .tools {
@@ -275,15 +317,22 @@ li {
 
 .tools div {
   font-size: 1.25vw;
+  border: 0.1rem solid #200000;
   background-color: #200000;
   color: #ffff;
   text-decoration: none;
-
   margin: 1%;
-  width: fit-content;
+  /* width: fit-content; */
   border-radius: 2px;
   padding: 0.5% 1%;
-  box-shadow: 8px 7px 5px 1px darkgrey;
+  /* box-shadow: 8px 7px 5px 1px darkgrey; */
+}
+
+.tools div:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem #200000;
+  border-color: #200000;
+  opacity: 0.95;
 }
 
 .soft {
@@ -292,15 +341,22 @@ li {
 
 .soft div {
   font-size: 1.25vw;
+  border: 0.1rem solid #200000;
   background-color: #200000;
   color: #ffff;
   text-decoration: none;
-
   margin: 1%;
-  width: fit-content;
+  /* width: fit-content; */
   border-radius: 2px;
   padding: 0.5% 1%;
-  box-shadow: 8px 7px 5px 1px darkgrey;
+  /* box-shadow: 8px 7px 5px 1px darkgrey; */
+}
+
+.soft div:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem #200000;
+  border-color: #200000;
+  opacity: 0.95;
 }
 
 .projectsPage {
