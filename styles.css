@@ -203,6 +203,7 @@ li:hover::before {
 }
 .profile-buttons {
   display: flex;
+  flex-wrap: wrap;
 }
 .pro-button {
   font-size: 1.5vw;
@@ -269,6 +270,7 @@ li:hover::before {
 }
 .languages {
   display: flex;
+  flex-wrap: wrap;
 }
 .languages div {
   font-size: 1.25vw;
@@ -290,6 +292,7 @@ li:hover::before {
 
 .frameworks {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .frameworks div {
@@ -313,6 +316,7 @@ li:hover::before {
 
 .tools {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .tools div {
@@ -337,6 +341,7 @@ li:hover::before {
 
 .soft {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .soft div {
@@ -402,9 +407,12 @@ li:hover::before {
 }
 
 @media screen and (max-width: 800px) {
+  .outer {
+    display: grid;
+  }
   .navbar,
   .content {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    max-width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
   }
   .navbar {
     display: none;
@@ -412,6 +420,7 @@ li:hover::before {
   }
   .content {
     margin-left: 0px;
+    display: grid;
   }
   .homePage {
     justify-content: center;
@@ -427,7 +436,8 @@ li:hover::before {
     display: none;
   }
 
-  .languages .butt,
+  .languages div,
+  .butt,
   .frameworks div,
   .tools div,
   .soft div,
